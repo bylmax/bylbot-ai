@@ -20,7 +20,7 @@ def keep_alive():
 def ping_self():
     while True:
         try:
-            requests.get('MYBOTADDERS')
+            requests.get('https://bylbot-ai-wif4.onrender.com')
         except:
             pass
         time.sleep(300)  # هر 5 دقیقه

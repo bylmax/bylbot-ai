@@ -11,9 +11,8 @@ from keep_alive import keep_alive
 keep_alive()
 
 apihelper.ENABLE_MIDDLEWARE = True
-API_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-if not API_TOKEN:
-    raise RuntimeError("TELEGRAM_BOT_TOKEN environment variable is not set")
+API_TOKEN ="8224216936:AAFcLtbxgHTi6coPa5mvdH8wS0x1VQ4H_qY"
+
 
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -25,7 +24,7 @@ def send_welcome(message):
 @bot.message_handler(content_types=['text'])
 def echo(message):
     prompt = message.text
-    answer = ask_gemini(prompt, "AI_API_KEY")
+    answer = ask_gemini(prompt, "AIzaSyCtrFeQ16pW-WPzcUpp-N-IB1LwcmsaVlk")
     bot.send_chat_action(message.chat.id, 'typing')
     bot.send_message(message.chat.id, answer)
 
