@@ -19,7 +19,8 @@ bot = telebot.TeleBot(API_TOKEN)
 # هندلرهای شما...
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.send_message(message.chat.id, 'hello welcome to my bot')
+    bot.send_message(message.chat.id, 'سلام به ربات هوش مصنوعی Bylai خوش آمدید')
+    bot.send_message(message.chat.id, 'hello and welcome to Bylai')
 
 @bot.message_handler(content_types=['text'])
 def echo(message):
